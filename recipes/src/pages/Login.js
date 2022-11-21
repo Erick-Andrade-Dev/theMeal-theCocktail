@@ -15,21 +15,28 @@ function onClickStorage(email) {
 
 export default function Login(props) {
   const [validation, setValidation] = useState(true);
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [login, setLogin] = useState({
+    email: '',
+    password:''
+  })  
 
   useEffect(() => {
-    if(validateEmail(email) && password.length > 6) {
+    if(validateEmail(login.email) && login.password.length > 6) {
       setValidation(false)
     } else {
       setValidation(true)
     }
-  }, [email, password])
+  }, [login])
+
+  function setFormLogin({target}) {
+    const { name, value } = target
+    setLogin({...login, [name]: value})
+  } 
 
   const enterEvent = (e) => {
     let key = e.which || e.keyCode;
     if (key === 13 && !validation) {
-      onClickStorage(email);
+      onClickStorage(login.email);
       return props.history.push("/comidas")     
     }
   };
@@ -41,21 +48,23 @@ export default function Login(props) {
         <input 
           className="input-login"
           type="email"
+          name="email"
           placeholder="Digite seu e-mail"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setFormLogin(e)}
         />        
          <input 
           className="input-login"
           type="password"
+          name="password"
           placeholder="Digite sua senha"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => setFormLogin(e)}
           onKeyUp={(e) => enterEvent(e)}
         />
         <Link to="/comidas">
           <button
             className="btn-login"
             type="button"
-            onClick={() => onClickStorage(email)}
+            onClick={() => onClickStorage(login.email)}
             disabled={ validation }
           >
             Entrar
