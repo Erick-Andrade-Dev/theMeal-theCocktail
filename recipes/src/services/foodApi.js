@@ -32,3 +32,31 @@ export const searchMealById = (id) => (
     .then((meal) => meal.meals)
     .catch((error) => error))
 )
+
+export const searchMealRandom = () => (
+  fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
+    .then((response) => response.json()
+    .then((meal) => meal.meals)
+    .catch((error) => error))
+)
+
+export const searchMealArea = (area) => (
+  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`)
+    .then((response) => response.json()
+    .then((meal) => meal.meals)
+    .catch((error) => error))
+)
+
+export const searchMealCategory = () => (
+  fetch('https://www.themealdb.com/api/json/v1/1/list.php?c=list')
+    .then((response) => response.json()
+    .then((meal) => meal.meals)
+    .catch((error) => error))
+)
+  
+export const searchMealByCategory = (cat) => (
+  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${cat}`)
+    .then((response) => response.json()
+    .then((meal) => meal.meals)
+    .catch((error) => error))
+)
