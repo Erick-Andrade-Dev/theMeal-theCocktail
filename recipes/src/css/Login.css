@@ -1,0 +1,56 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.form-login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://img.freepik.com/fotos-premium/conjunto-de-pratos-de-frutos-do-mar-polvo-de-lulas-de-peixe-em-um-fundo-de-pedra-preta-vista-superior-espaco-livre-para-o-seu-texto_187166-12603.jpg?w=2000');
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+
+.container-inputs {
+  border: 2px dashed rgb(43, 41, 41);
+  padding: 100px;
+  box-shadow: 30px 20px rgb(168, 167, 167, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;  
+  justify-content: center;
+  align-items: center;
+  background-color:rgb(167, 158, 158, 0.3) ;
+}
+
+.title-login {
+  text-align: center;
+  font-weight: 800;
+  font-style: italic;  
+}
+
+.input-login {
+  border: none;
+  border: 3px double black;
+  padding: 2.5px;
+  border-radius: 4.5px; 
+} 
+
+.btn-login {
+  color: black;
+  border: none;
+  border: 3px double black;
+  padding: 2.5px;
+  font-weight: 700;
+  border-radius: 5px;  
+  width: 100px;
+}
+
+.btn-login:hover {
+  opacity: 1;
+  cursor: pointer;
+}
