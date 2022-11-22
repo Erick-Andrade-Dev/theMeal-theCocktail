@@ -1,4 +1,3 @@
-
 export const ApiSearchMealByName = (name) => (
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
     .then((response) => response.json()
@@ -23,7 +22,7 @@ export const ApiSearchByMainIngredient = (mainIngredient) => (
 export const searchMealsByListOfIngredient = () => (
   fetch('https://www.themealdb.com/api/json/v1/1/list.php?i=list')
     .then((response) => response.json()
-    .then((list) => list.meal )
+    .then((list) => list.meals )
     .catch((error) => error))
 );
 
@@ -60,4 +59,12 @@ export const searchMealByCategory = (cat) => (
     .then((response) => response.json()
     .then((meal) => meal.meals)
     .catch((error) => error))
+);
+
+export const searchMealFilterArea = () => (
+  fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
+    .then((response) => response.json()
+    .then((meal) => meal.meals)
+    .catch((error) => error),
+  )
 );

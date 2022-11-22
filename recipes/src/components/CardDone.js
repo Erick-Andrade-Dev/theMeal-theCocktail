@@ -26,7 +26,7 @@ export default function CardDone(props) {
           <HorizontalName item={item} index={index} />
           <ShareOption index={index} copy={copy} item={item} setCopy={setCopy} />
         </div>
-        <div>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
           <span>Feita em: </span>{' '}
           <span>{doneDate}</span>
         </div>

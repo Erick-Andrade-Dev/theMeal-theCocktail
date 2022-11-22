@@ -37,7 +37,7 @@ function funcLinks(details, favority, setFavority, copiador, copy) {
   if (details.strDrink) title = details.strDrink;
   return (
     <div className="container-title-icons">
-      <h1 data-testid="recipe-title">
+      <h1 className="title-recipe-progress">
         {title}
       </h1>
       <div className="container-icons">
@@ -186,8 +186,7 @@ function Button(props) {
     <Link to={'/receitas-feitas'}>
       <button
         className="btn-process"
-        type="button"
-        data-testid="finish-recipe-btn"        
+        type="button"            
         disabled={ habilita }
         onClick={() => moveToDone(details) }
       >
@@ -215,13 +214,13 @@ export default function NewProcess(props) {
       {imageMain(details)}
       <div className="ingredients-process">
         {funcLinks(details, favority, setFavority, copiador, copy)}
-        <h5 data-testid="recipe-category">
+        <h3 className="title-category-progress">
           {details.strCategory}
-        </h5>
+        </h3>
         <h3 className="ingredients-list">Ingredients</h3>
-        <ul>
+        <ul className="container-checkbox-finally">
           {novosIngredientes.map((item) => (
-            <div data-testid="0-ingredient-step" key={item}>
+            <div key={item}>
               <InputCheck               
                 item={item}               
                 action={changeStorage}
@@ -235,7 +234,7 @@ export default function NewProcess(props) {
           ))}
         </ul>
         <h3 className="ingredients-list">Instructions:</h3>
-        <p data-testid="instructions">
+        <p>
           {details.strInstructions}
         </p>
       </div>

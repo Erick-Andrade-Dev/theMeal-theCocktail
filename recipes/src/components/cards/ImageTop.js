@@ -7,7 +7,8 @@ export default function ImageTop(props) {
   const { index } = props;
   return (
     <Link to={`/${type}s/${id}`}>
-      <img              
+      <img  
+        className="image-favoriteFood"              
         src={image}
         alt={name}        
       />

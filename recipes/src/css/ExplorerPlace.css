@@ -1,0 +1,49 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.filter-local-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.filter-local {
+  border: none;
+  border: 3px double green;
+  padding: 3px;
+  width: 120px;
+  font-weight: bolder;
+}
+
+.container-filters-places {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.container-header-filter-place {
+  display: flex;
+  gap: 15px;
+}
+
+.recipes-local{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.title-recipes {
+  text-align: center;
+  width: 300px;
+}
+
+.icons-menu-top {
+  display: flex;
+  gap: 15px;
+}

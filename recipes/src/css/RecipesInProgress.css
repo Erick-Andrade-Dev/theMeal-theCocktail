@@ -1,0 +1,59 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.container-process-recipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-title-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-recipe-progress {
+  font-weight: 600;
+  text-align: center;
+}
+
+.container-checkbox-finally {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ingredients-list {
+  margin-bottom: 5px;
+}
+
+.btn-process {  
+  margin-top: 15px;
+  width: 200px;
+  border: none;
+  padding: 3px;
+  border: 3px double green;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.title-category-progress {
+  text-align: center;
+  margin: 15px;
+  border: 1px solid green;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.image-recipe-progress {
+  width: 350px;
+  height: 300px;
+}

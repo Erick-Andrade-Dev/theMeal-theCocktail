@@ -1,0 +1,35 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.infos-perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.email-person {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+  border-bottom: 2px solid green;
+}
+
+.button-perfil {
+  border: none;
+  border: 2px solid green;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 5px;
+  cursor: pointer;
+  width: 250px;
+}
+
+.button-perfil:hover {
+  border: 2px solid darkgreen;
+}

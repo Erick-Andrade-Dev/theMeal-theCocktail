@@ -7,7 +7,7 @@ export function imageMain(details) {
     title = details.strDrink;
     foto = details.strDrinkThumb;
   }
-  return <img src={foto} alt={title} />;
+  return <img src={foto} alt={title} className="image-recipe-progress"/>;
 }
 
 export function addFavorite(receita, setFavorite) {

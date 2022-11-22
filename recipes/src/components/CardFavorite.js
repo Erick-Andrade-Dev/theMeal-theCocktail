@@ -27,17 +27,16 @@ export default function CardFavorite(props) {
       <div>
         <div className="infos-favorites">
           {isMeal ? (
-            <p data-testid={`${index}-horizontal-top-text`}>{`${area} - ${category}`}</p>
+            <p>{`${area} - ${category}`}</p>
           ) : (
-            <p data-testid={`${index}-horizontal-top-text`}>{alcoholicOrNot}</p>
+            <p>{alcoholicOrNot}</p>
           )}
           <div className="container-icons">
             <ShareOption index={index} copy={copy} item={item} setCopy={setCopy} />
             <Link onClick={() => desFavorite(id)}>
               <img
                 src={blackHeart}
-                alt="like icon"              
-                data-testid={`${index}-horizontal-favorite-btn`}
+                alt="like icon"                                    
               />
             </Link>
           </div>          

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Recipes from './Recipe';
 
-export default function ListReceitas(props) {
+export default function ListRecipesPlace(props) {
   const { receitas } = props;
   if (!receitas) {
     return <h1>Loading...</h1>;
@@ -18,6 +18,6 @@ export default function ListReceitas(props) {
   );
 }
 
-ListReceitas.propTypes = {
+ListRecipesPlace.propTypes = {
   receitas: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.object])).isRequired,
 };
