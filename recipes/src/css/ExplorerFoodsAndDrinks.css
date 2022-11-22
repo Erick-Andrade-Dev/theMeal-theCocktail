@@ -1,0 +1,31 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.container-explorer-foodsDrinks {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.btns-explorer-foodsDrinks {
+  display: flex;
+  height: 60vh;
+  align-items: center;
+  background-color:lightgreen;
+  padding: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.btn-explorer {
+  border: none;
+  border-radius: 5px;
+  border: 2px solid green;
+  padding: 2px;
+  font-weight: 500;
+  cursor: pointer;
+}

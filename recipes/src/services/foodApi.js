@@ -1,3 +1,4 @@
+
 export const ApiSearchMealByName = (name) => (
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
     .then((response) => response.json()
@@ -34,7 +35,7 @@ export const searchMealById = (id) => (
 );
 
 export const searchMealRandom = () => (
-  fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list')
+  fetch('https://www.themealdb.com/api/json/v1/1/random.php')
     .then((response) => response.json()
     .then((meal) => meal.meals)
     .catch((error) => error))

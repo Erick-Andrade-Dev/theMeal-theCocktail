@@ -3,8 +3,10 @@ import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import DetailDrink from './pages/DetailDrink';
 import DetailFood from './pages/DetailFood';
+import Explorer from './pages/Explorer';
 import Login from './pages/Login';
 import Main from './pages/Main';
+import ExplorerFoodsAndDrinks from './pages/ExplorerFoodAndDrinks';
 
 function App() {
   return (
@@ -14,6 +16,9 @@ function App() {
       <Route path="/bebidas/:id_da_receita" component={ DetailDrink } />
       <Route path='/comidas' component={ Main }/>
       <Route path='/bebidas' component={ Main }/>
+      <Route exact path='/explorar' component={ Explorer }/>
+      <Route exact path='/explorar/comidas' component={ ExplorerFoodsAndDrinks }/>
+      <Route exact path='/explorar/bebidas' component={ ExplorerFoodsAndDrinks }/>
     </Switch>
   );
 }
